@@ -10,7 +10,7 @@ else:
 
 '''2. Compare the values of my_age and your_age using if … else. Who is older (me or you)? Use input(“Enter your age: ”) to get the age as input. 
 You can use a nested condition to print 'year' for 1 year difference in age, 'years' for bigger differences, and a custom text if my_age = your_age.'''
-my_age = int(30)
+'''my_age = int(30)
 your_age = int(input("What is your age:"))
 
 if my_age > your_age:
@@ -26,4 +26,15 @@ elif my_age < your_age:
     elif difference == 1:
         print("You are 1 year older than me.")
 else:
-    print("We are the same age.")
+    print("We are the same age.")'''
+
+#3. 
+a = float(input("Input a number:"))
+b = float(input("Input a second number:"))
+
+if a > b:
+    print(f"{a} is greater than {b}")
+elif a < b:
+    print(f"{a} is less than {b}")
+else:
+    print(f"{a} is equal to {b}")
