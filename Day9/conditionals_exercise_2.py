@@ -71,7 +71,7 @@ person={
     'age': 123,
     'country': 'Croatia',
     'is_marred': True,
-    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Pythonn'],
+    'skills': ['Node', 'MongoDB', 'Python'],
     'address': {
         'street': 'Balloon Street',
         'zipcode': '02210'
@@ -92,5 +92,13 @@ if person["skills"]:
 else:
     print("Dude has no skills.")
 
+if len(person["skills"]) == 2 and person["skills"] == ["JavaScript","React"]:
+    print("This person is a frontend developer")
+elif len(person["skills"]) == 3 and ["Node","Python","MongoDB"] in person["skills"]:
+    print("This person is a backend developer.")
+elif len(person["skills"]) == 3 and person["skills"] == ["React", "Node", "MongoDB"]:
+    print("This person is a fullstack developer.")
+else:
+    print("Unknown title")
 
 
