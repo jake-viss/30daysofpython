@@ -1,4 +1,8 @@
 # Add two numbers function
+from audioop import reverse
+from hashlib import new
+
+
 def add_two_numbers(num1,num2):
     _sum = num1 + num2
     return _sum
@@ -56,4 +60,57 @@ def print_list(your_list):
         print(item)
 my_list = ["boom","snap","clap",2007]
 print_list(my_list)
-    
+
+# Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
+def reverse_list(nums):
+    new_list = []
+    for i in range(len(nums)):
+        new_list.insert(i,nums[-1])
+        nums.pop(-1)
+    return print(new_list)
+   
+
+nums = [1,2,3,4,5]
+reverse_list(nums)
+
+# Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items
+def capitalize_list_items(items):
+    capitalized_items = []
+    for i in range(len(items)):
+        capitalized_items.append(items[i].capitalize())
+    return print(capitalized_items)
+
+words = ["jake","liz","lilly"]
+capitalize_list_items(words)
+print(words[1].capitalize())
+
+# Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
+def add_item(xlist, item):
+    xlist.append(item)
+    return xlist
+
+test_list = ["ski", 2022, "pow"]
+add_item(test_list, "steep")
+print(test_list)
+
+# Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+def remove_item(xlist, item):
+    xlist.remove(item)
+    return xlist
+
+
+remove_item(test_list, "ski")
+print(test_list)  
+
+# Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+def sum_of_numbers(num):
+    total = 0
+    for i in range(num+1):
+        total += i
+    return print(total)
+
+sum_of_numbers(10)
+
+# Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
+# def sum_of_odds():
+
