@@ -1,4 +1,7 @@
 # Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+from numpy import var
+
+
 def evens_and_odds(num):
     evens = []
     odds = []
@@ -22,6 +25,28 @@ def factorial(num):
     return total
 
 print(factorial(10))
+
+# Call your function is_empty, it takes a parameter and it checks if it is empty or not
+def is_empty(param):
+    if param == {}:
+        print("The parameter is empty")
+    else:
+        print("The parameter is not empty")
+
+variable = ["Moose","Elk"]
+is_empty(variable)
+
+# Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+def calculate_mean(_list):
+    list_len = len(_list)
+    total = 0
+    for i in _list:
+        total += i
+    mean = total / list_len
+    return mean
+
+ex = [10,5,5,7]
+print(calculate_mean(ex))
 
 
     
