@@ -1,4 +1,5 @@
 # Filter only negative and zero in the list using list comprehension
+from aem import con
 from numpy import number
 
 
@@ -47,3 +48,20 @@ countries_flattened4 = [[sublist[0]] + [sublist[0][0:3]] + [sublist[1]] for subl
 # Need to find out how to capitalize
 print(countries_flattened4)
 
+# Change the following list to a list of dictionaries:
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+'''output:
+[{'country': 'FINLAND', 'city': 'HELSINKI'},
+{'country': 'SWEDEN', 'city': 'STOCKHOLM'},
+{'country': 'NORWAY', 'city': 'OSLO'}]'''
+list_of_dicts = [{'country':sublist[0], 'city':sublist[1]} for sublist in countries for sublist in sublist]
+print(list_of_dicts)
+
+# Change the following list of lists to a list of concatenated strings:
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+'''output
+['Asabeneh Yetaeyeh', 'David Smith', 'Donald Trump', 'Bill Gates']'''
+conc_strings = [(sublist[0] + ' ' + sublist[1]) for sublist in names for sublist in sublist]
+print(conc_strings)
+
+# Write a lambda function which can solve a slope or y-intercept of linear functions.
