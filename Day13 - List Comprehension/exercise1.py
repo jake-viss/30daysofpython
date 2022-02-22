@@ -1,4 +1,5 @@
 # Filter only negative and zero in the list using list comprehension
+from tkinter import Y
 from aem import con
 from numpy import number
 
@@ -65,3 +66,21 @@ conc_strings = [(sublist[0] + ' ' + sublist[1]) for sublist in names for sublist
 print(conc_strings)
 
 # Write a lambda function which can solve a slope or y-intercept of linear functions.
+def getSlope(x1, y1, x2, y2):
+    return (y2-y1)/(x2-x1)
+
+print(getSlope(4,2,5,6))
+
+def getYInt(x1, y1, x2, y2):
+    slope = getSlope(x1, y1, x2, y2)
+    y = -x1*slope+y1
+    return (0, y)
+
+'''>>> getYInt((7, 3), (2, 9))
+(0, 11.4)'''
+
+print(getYInt(7,3,2,9))
+
+y_intercept = lambda x1,y1,x2,y2 : -x1 * (getSlope(x1, y1, x2, y2)) +y1
+
+print(y_intercept(7,3,2,9))
