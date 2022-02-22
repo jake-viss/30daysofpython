@@ -32,4 +32,18 @@ flattened_list = [number for row in list_of_lists for row in row for number in r
 print(flattened_list)
 
 # Using list comprehension create the following list of tuples:
+tup_list = [tuple([i] + [i**j for j in range(6)]) for i in range(11)]
+print(tup_list)
+
+
+# Flatten the following list to a new list:
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+'''output:
+[['FINLAND','FIN', 'HELSINKI'], ['SWEDEN', 'SWE', 'STOCKHOLM'], ['NORWAY', 'NOR', 'OSLO']]'''
+countries_flattened = [country for row in countries for tuple in row for country in tuple]
+countries_flattened2 = [[country] + [country[0:4]] for sublist in countries for tuple in sublist for country in tuple]
+countries_flattened3 = [[sublist[0]] + [sublist[0][0:3]] + [sublist[1]] for sublist in countries for sublist in sublist]
+countries_flattened4 = [[sublist[0]] + [sublist[0][0:3]] + [sublist[1]] for sublist in countries for sublist in sublist]
+# Need to find out how to capitalize
+print(countries_flattened4)
 
