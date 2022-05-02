@@ -61,16 +61,18 @@ countries_no_e = filter(out_E, countries)
 print(list(countries_no_e))
 
 # Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
-def uppercase(x):
-    return x.upper()
-
-def landless(x):
-    if "LAND" not in x:
-        return True
-    else:
-        return False
 
 
 
 upper_case_landless = filter(landless,(map(uppercase, countries)))
 print(list(upper_case_landless))
+
+# Declare a function called get_string_lists which takes a list as a parameter and then returns a list containing only string items.
+def get_string_lists(x):
+   for i in x:
+       i = str(i)
+       return x
+
+print(get_string_lists(numbers))
+
+
